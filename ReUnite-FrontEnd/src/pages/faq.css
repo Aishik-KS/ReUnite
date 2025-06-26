@@ -1,0 +1,108 @@
+.faqPage {
+  padding: 10vh 5% 2rem;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #5c2e91, #7e66e3, #c4b5fd);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.faqPage-Display {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.faqPage-DisplayContent {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.faq-container {
+  max-width: 850px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c2f33;
+}
+
+.faq-description {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: #4a5568;
+  max-width: 750px;
+  margin: 0 auto 2rem;
+  padding: 0.1rem;
+}
+
+.faq-item {
+  border: 1px solid #7aa7d2;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background: #f9f9f9;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.faq-question {
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: flex-start; /* align content to start */
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+  background-color: #5c2e91;
+  user-select: none;
+  outline: none;
+  min-height: 70px;
+}
+
+.faq-question:hover {
+  background-color: #7e66e3;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #b0c4de;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.visible {
+  max-height: 500px; /* large enough to fit content */
+  padding: 15px 20px;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.open .chevron {
+  transform: rotate(90deg/2);
+}

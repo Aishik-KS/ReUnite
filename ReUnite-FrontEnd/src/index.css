@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #5c2e91; /* Discord-like blue */
+  --dark-primary-color: #4752c4;
+  --light-primary-color: #7e66e3;
+  --secondary-color: #3b82f6;
+  --dark-secondary-color: #2563eb;
+  --light-secondary-color: #4fc3f7; /* Used for nav bar */
+  --light-color: #f8f9fa;
+  --dark-color: #23272a;
+  --text-color: #2c2f33;
+  --border-radius: 10px;
+  --box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  --transition: all 400ms ease-in-out;
+  --background-color: linear-gradient(to bottom, #5c2e91, #7e66e3, #c4b5fd);
+}
+
+/* var(--primary-color): var(--secondary-color); Discord-like blue */
+/* --secondary-color: #4752c4; */
+
+* {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+/* we can use these variables everywhere!!! */

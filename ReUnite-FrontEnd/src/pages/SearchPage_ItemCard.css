@@ -1,0 +1,82 @@
+:root {
+  --color-primary: #5c7c89;
+  --transition: all 400ms ease-in-out;
+}
+
+.SearchPage-ItemCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: var(--transition);
+  aspect-ratio: 1/1; /* Perfect square */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.SearchPage-ItemCard:hover {
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+  transform: translateY(-5px);
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.SearchPage-ItemCard:hover .item-image {
+  transform: scale(1.05);
+  filter: brightness(50%);
+}
+
+.ItemCard-Content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 1.5rem;
+  color: white;
+  transform: translateY(100%);
+  transition: var(--transition);
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.SearchPage-ItemCard:hover .ItemCard-Content {
+  transform: translateY(0);
+}
+
+.ItemTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.ItemDescription {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.ItemPrice {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.Btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.Btn:hover {
+  background-color: #4a6373;
+}

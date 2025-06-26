@@ -1,0 +1,246 @@
+.SubmitPage {
+  padding: 10vh 5% 2rem;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #5c2e91, #7e66e3, #c4b5fd);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.SubmitPage-Form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.SubmitPage-FormContent {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.SubmitPage-FormLeft,
+.SubmitPage-FormRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.8rem;
+}
+
+.SubmitPage-FormLeft {
+  flex: 0.8;
+}
+.SubmitPage-FormRight {
+  flex: 1.2;
+}
+
+.SubmitPage-FormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.SubmitPage-FormGroup label,
+.SubmitPage-UploadLabel,
+.SubmitPage-Map-Wrapper h3 {
+  font-weight: 600;
+  color: #343a40;
+  font-size: 1rem;
+}
+
+.SubmitPage-FormGroup input,
+.SubmitPage-FormGroup textarea,
+.location-input-group input {
+  padding: 0.9rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.SubmitPage-FormGroup input:focus,
+.SubmitPage-FormGroup textarea:focus,
+.location-input-group input:focus {
+  outline: none;
+  border-color: #5c2e91;
+  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.2);
+}
+
+.SubmitPage-FormGroup textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.SubmitPage-FormGroup.description-group {
+  flex: 1;
+}
+
+.SubmitPage-FormGroup.description-group textarea {
+  flex: 1;
+}
+
+.SubmitPage-UploadArea {
+  height: 270px;
+  border: 2px dashed #ced4da;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-top: -1.1rem;
+}
+
+.SubmitPage-UploadArea:hover {
+  border-color: #5c2e91;
+  background-color: rgba(79, 195, 247, 0.05);
+}
+
+.SubmitPage-UploadPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #6c757d;
+}
+
+.SubmitPage-UploadPlaceholder p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.SubmitPage-CameraIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #adb5bd;
+}
+
+.SubmitPage-ImagePreview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.SubmitPage-FileInput {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.SubmitPage-CameraButton {
+  display: none;
+}
+
+/* Maps Container */
+.SubmitPage-MapsContainer {
+  display: flex;
+  flex-direction: column; /* Always stack maps vertically */
+  gap: 2rem; /* Gap between the two maps */
+  width: 100%;
+}
+
+.SubmitPage-Map-Wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%; /* Ensure map wrapper takes full width */
+}
+
+.SubmitPage-Map-Wrapper h3 {
+  font-size: 1.2rem;
+  color: #343a40;
+  margin-bottom: 0;
+}
+
+.SubmitPage-Map {
+  height: 300px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  width: 100%; /* Ensure map itself takes full width */
+}
+
+.location-input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.location-input-group input {
+  flex: 1;
+}
+
+.location-button,
+.SubmitPage-AIButton {
+  background: #5c2e91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.location-button:hover,
+.SubmitPage-AIButton:hover {
+  background: #4a2473; /* a slightly darker shade for hover */
+}
+
+.location-button:hover,
+.SubmitPage-AIButton:hover {
+  background: #5c2e91;
+}
+
+.SubmitPage-AIButton {
+  width: 100%;
+}
+
+.SubmitPage-FormTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Full Width Submit Button */
+.SubmitPage-SubmitButton {
+  padding: 1rem;
+  background-color: #4a2473;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+  width: 100%; /* Make the button take full width */
+}
+
+.SubmitPage-SubmitButton:hover {
+  background-color: #4a2473;
+  transform: translateY(-2px);
+}

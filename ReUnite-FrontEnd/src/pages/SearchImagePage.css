@@ -1,0 +1,155 @@
+.SearchImagePage-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #5c2e91, #7e66e3, #c4b5fd);
+  padding: 20px;
+}
+
+.SearchImagePage {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.SearchImagePage-Content {
+  display: flex;
+  gap: 20px;
+}
+
+.SearchImagePage-Left {
+  flex: 1;
+  max-width: 300px;
+  margin-top: 1rem;
+  position: fixed;
+  top: 15vh; /* Add top positioning if needed */
+  left: 30vh; /* You can adjust this based on how far left you want it */
+  height: calc(100vh - 40px); /* Ensures it doesn’t overflow the viewport */
+}
+
+.SearchImagePage-Right {
+  flex: 3;
+  margin-left: 320px; /* Adjust this to give space for the fixed left column */
+}
+
+.SearchImagePage-ImageContainer {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 95%;
+}
+
+.SearchImagePage-ChangeImage button {
+  width: 95%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.SearchImagePage-ChangeImage button:hover {
+  background-color: #e0e0e0;
+  border-color: white;
+}
+
+.SearchImagePage-Controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 10px;
+  background: #ffffff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.view-icon {
+  font-size: 1.4rem;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.view-icon:hover {
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+.view-icon.active {
+  color: #3b82f6;
+  background: #eff6ff;
+}
+
+.SearchPage-Items.grid-view {
+  display: grid;
+  grid-template-columns: repeat(3);
+  gap: 24px;
+}
+
+.SearchPage-Items.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.SearchImagePage-EmptyState {
+  text-align: center;
+  padding: 40px;
+}
+
+.SearchImagePage-EmptyState button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.no-results {
+  text-align: center;
+  padding: 50px;
+  color: #64748b;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .SearchImagePage {
+    flex-direction: column;
+  }
+
+  .SearchImagePage-Left {
+    max-width: 100%;
+    position: relative; /* Remove fixed position for small screens */
+    margin-top: 0;
+  }
+
+  .SearchPage-Items.grid-view {
+    grid-template-columns: 1fr;
+  }
+
+  .SearchImagePage-Right {
+    margin-left: 0; /* Remove the left margin in mobile */
+  }
+}
+
+.SearchImagePage-Title {
+  color: white;
+  font-size: 3rem;
+  margin: 0 auto 10px auto; /* was 20px, now 10px for less spacing */
+  max-width: 1400px;
+}
+
+.SearchImagePage-UploadedImage {
+  width: 275px;
+  height: auto;
+  display: flex;
+  border: 4px solid white; /* Added white border */
+  border-radius: 8px;
+}
