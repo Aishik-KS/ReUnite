@@ -6,10 +6,11 @@
   align-items: center;
   justify-content: space-between;
   background: var(--background-color);
-  /* padding: 0 5%; */
   position: relative;
   overflow: hidden;
   margin-top: 10vh;
+  padding: 0 5%;
+  gap: 1.5rem;
 }
 
 .HomePage-Left,
@@ -29,11 +30,11 @@
 }
 
 .HomePage-Left img {
-  animation-delay: 0.5s; /* Stagger the animations */
+  animation-delay: 0.5s;
 }
 
 .HomePage-Right img {
-  animation-delay: 1s; /* Stagger the animations */
+  animation-delay: 1s;
 }
 
 @keyframes float {
@@ -52,7 +53,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: relative;
   z-index: 2;
 }
 
@@ -62,7 +62,6 @@
   font-size: 8rem;
   color: white;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
 }
 
 .HomePage-SubTitle {
@@ -71,7 +70,7 @@
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);
-  margin: 0rem 0 2rem;
+  margin: 0 0 2rem;
   max-width: 600px;
   letter-spacing: 0.5px;
   transition: transform 0.3s ease;
@@ -84,18 +83,21 @@
 .HomePage-SubTitle strong {
   font-weight: 800;
 }
+
 .HomePage-Buttons {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .HomePage-Button {
   padding: 0.6rem 1.4rem;
   border: none;
-  border-radius: 5rem;
-  font-size: 1.3rem;
+  border-radius: 1vw;
+  font-size: 1.2vw;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -117,21 +119,20 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* ========== Laptop (up to 1024px) ========== */
+/* ========== Laptop (≤1200px) ========== */
 @media screen and (max-width: 1200px) {
   .HomePage {
     flex-direction: column;
     padding: 2rem 4%;
     margin-top: 5vh;
-    min-height: auto;
   }
 
   .HomePage-Left,
   .HomePage-Right,
   .HomePage-Center {
-    flex: unset;
     width: 100%;
     margin-bottom: 2rem;
+    flex: unset;
   }
 
   .HomePage-Title {
@@ -156,15 +157,25 @@
   .HomePage-Button {
     width: 100%;
     font-size: 1.1rem;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 0.8rem;
   }
 }
 
-/* ========== Mobile (up to 600px) ========== */
+/* ========== Mobile (≤600px) ========== */
 @media screen and (max-width: 600px) {
   .HomePage {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1rem;
     margin-top: 5vh;
+  }
+
+  .HomePage-Left img,
+  .HomePage-Right img {
+    max-width: 80%;
+    animation: none;
+  }
+
+  .HomePage-Right {
+    display: none;
   }
 
   .HomePage-Title {
@@ -174,12 +185,6 @@
   .HomePage-SubTitle {
     font-size: 1rem;
     line-height: 1.6;
-  }
-
-  .HomePage-Left img,
-  .HomePage-Right img {
-    max-width: 80%;
-    animation: none; /* Reduce animation on mobile */
   }
 
   .HomePage-Buttons {

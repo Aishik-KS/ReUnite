@@ -7,8 +7,6 @@ import Logo from "../assets/ReUnite_Logo.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
-  let screenWidth = window.innerWidth;
-  let screenHeight = window.innerHeight;
   return (
     <>
       <Navbar />

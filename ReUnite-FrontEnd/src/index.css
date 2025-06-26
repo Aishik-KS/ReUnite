@@ -20,6 +20,8 @@
 * {
   margin: 0;
   font-family: "Arial", sans-serif;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
 }
 
 /* we can use these variables everywhere!!! */
