@@ -6,13 +6,13 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import "./SearchPage_ItemModal.css";
-import { db } from "../config/firebase";
+import { db } from "../helpers/firebase";
 import { doc, updateDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "../config/firebase";
-import { sendClaimedItemEmail } from "../utils/emailHelper";
+import { auth } from "../helpers/firebase";
+import { sendClaimedItemEmail } from "../helpers/emailHelper";
 
 const SearchPage_ItemModal = ({ item, onClose }) => {
   if (!item) return null;

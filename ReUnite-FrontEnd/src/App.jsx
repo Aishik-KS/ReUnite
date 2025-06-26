@@ -5,14 +5,11 @@ import AdminLogin from "./pages/AdminLoginPage";
 import AdminDashboard from "./pages/AdminDashBoard";
 import SubmitPage from "./pages/SubmitPage";
 import SearchPage from "./pages/SearchPage";
-import About from "./pages/About";
-import NotificationModal from "./pages/NotificationModal";
-import Testpage from "./pages/test";
 import ErrorPage from "./pages/ErrorPage";
 import SearchImagePage from "./pages/SearchImagePage";
-import NotificationApply from "./pages/NotificationApply";
 import NotificationService from "./pages/NotificationService";
 import FAQ from "./pages/faq";
+import SendString from "./pages/SendString";
 
 const App = () => {
   return (
@@ -25,9 +22,9 @@ const App = () => {
         <Route path="/SearchPage" element={<SearchPage />} />
         <Route path="/Notify" element={<NotificationService />} />
         <Route path="/Error" element={<ErrorPage />} />
-        <Route path="/test" element={<Testpage />} />
         <Route path="/SearchImagePage" element={<SearchImagePage />} />
         <Route path="/Faq" element={<FAQ />} />
+        <Route path="/send" element={<SendString />} />
       </Routes>
     </div>
   );

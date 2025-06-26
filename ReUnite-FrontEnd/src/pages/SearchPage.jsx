@@ -10,7 +10,7 @@ import Fuse from "fuse.js";
 import { dummyItems } from "../assets/dummydata";
 import SearchPage_ImageUploadModal from "./SearchPage_ImageUploadModal";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../config/firebase"; // Make sure you have this firebase configuration file
+import { db } from "../helpers/firebase";
 
 const SearchPage = () => {
   // Code to Take From Firebase

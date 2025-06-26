@@ -14,13 +14,13 @@ import {
   HarmCategory,
 } from "https://esm.sh/@google/genai";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "../config/firebase";
+import { db } from "../helpers/firebase";
 import {
   CLOUDINARY_CLOUD_NAME,
   CLOUDINARY_UPLOAD_PRESET,
   GEMINI_API_KEY,
   GOOGLE_MAPS_API_KEY,
-} from "../config/configuration";
+} from "../../../Configuration/configuration";
 
 const DEFAULT_DROP_LOCATION = "One Stop@SAC";
 const NTU_COORDINATES = { lat: 1.3483099, lng: 103.6831347 };
