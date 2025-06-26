@@ -7,6 +7,8 @@ import Logo from "../assets/ReUnite_Logo.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
+  let screenWidth = window.innerWidth;
+  let screenHeight = window.innerHeight;
   return (
     <>
       <Navbar />
@@ -17,9 +19,10 @@ const HomePage = () => {
         <div className="HomePage-Center">
           <h1 className="HomePage-Title">ReUnite</h1>
           <div className="HomePage-SubTitle">
-            SOME THINGS <br /> ARE <br /> SIMPLY IRREPLACABLE. <br /> Recover
-            What's Yours.
+            Some Things Are <strong>SIMPLY IRREPLACEABLE</strong>. <br />
+            Recover <strong>What's Yours</strong>.
           </div>
+
           <div className="HomePage-Buttons">
             <button
               className="HomePage-Button Found"
