@@ -31,7 +31,7 @@ const fetchItemsFromFirebase = async () => {
     }));
 
     // Save to fetched-items.json
-    const filePath = path.join(__dirname, "./fetched-items.json");
+    const filePath = path.join(__dirname, "../");
     fs.writeFileSync(filePath, JSON.stringify(items, null, 2));
     console.log(
       `[${new Date().toLocaleString()}] Saved ${

@@ -1,11 +1,12 @@
 const nodemailer = require("nodemailer");
+const { NODEMAILER_EMAIL_USER, NODEMAILER_EMAIL_PASSWORD } = require("../Configuration/configuration");
 
 function createSendFoundItemEmailFunction() {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.Email_User,
-      pass: process.env.Email_Password,
+      user: NODEMAILER_EMAIL_USER,
+      pass: NODEMAILER_EMAIL_PASSWORD,
     },
   });
 
@@ -23,7 +24,7 @@ function createSendFoundItemEmailFunction() {
       "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750854289/ReUnite_Logo_xdd2gy.png";
 
     const mailOptions = {
-      from: process.env.Email_User,
+      from: NODEMAILER_EMAIL_USER,
       to,
       subject: "ReUnite: A possible match for your lost item",
       html: `
