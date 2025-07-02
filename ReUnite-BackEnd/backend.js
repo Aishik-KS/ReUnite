@@ -31,7 +31,7 @@ const fetchItemsFromFirebase = async () => {
     }));
 
     // Save to fetched-items.json
-    const filePath = path.join(__dirname, "../");
+    const filePath = path.join(__dirname, "./fetched-items.json");
     fs.writeFileSync(filePath, JSON.stringify(items, null, 2));
     console.log(
       `[${new Date().toLocaleString()}] Saved ${
@@ -124,6 +124,7 @@ app.get("/handle-exp", async (req, res) => {
 
 // Image Searching Transfer
 app.post("/process-string", (req, res) => {
+  fetchItemsFromFirebase();
   const targetImageDescription = req.body;
   console.log(targetImageDescription);
   // const targetImageDescription = "Red Wallet";
