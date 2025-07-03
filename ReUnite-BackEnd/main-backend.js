@@ -64,7 +64,6 @@ const deleteImageFromCloudinary = async (imageUrl) => {
 const handleItemsExpiry = async () => {
   try {
     const snapshot = await db.collection("items").get();
-    a;
     // Loop over each document in the snapshot
     snapshot.forEach(async (doc) => {
       const data = doc.data();
