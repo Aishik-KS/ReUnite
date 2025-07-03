@@ -158,7 +158,7 @@ const NotificationService = () => {
         email,
         imageUrl,
         description,
-        daysleft: 30,
+        daysLeft: 30,
       };
 
       await addDoc(collection(db, "notifications"), notificationData);

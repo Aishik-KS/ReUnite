@@ -24,7 +24,35 @@ const fetchedNotificationsDB = path.join(
   "FetchingData/fetched-notification.json"
 );
 
-const handleExpiration = async () => {
+const handleItemsExpiry = async () => {
+  try {
+    const snapshot = await db.collection("items").get();
+
+    // Loop over each document in the snapshot
+    snapshot.forEach(async (doc) => {
+      const data = doc.data();
+      let daysLeft = data.daysLeft;
+
+      if (daysLeft <= 0) {
+        // Delete from DB
+        await db.collection("items").doc(doc.id).delete();
+        console.log(`Deleted item ${doc.id}`);
+      } else {
+        // Decrement daysLeft by 1 and update the document
+        const updatedDaysLeft = daysLeft - 1;
+        await db
+          .collection("items")
+          .doc(doc.id)
+          .update({ daysLeft: updatedDaysLeft });
+        console.log(`Updated DaysLeft to ${updatedDaysLeft} for ${doc.id}`);
+      }
+    });
+  } catch (error) {
+    console.error("Error handling expiration: ", error);
+  }
+};
+
+const handleNotificationExpiry = async () => {
   try {
     const snapshot = await db.collection("notifications").get();
 
@@ -53,7 +81,8 @@ const handleExpiration = async () => {
 };
 
 app.get("/handle-exp", async (req, res) => {
-  await handleExpiration();
+  await handleNotificationExpiry();
+  await handleItemsExpiry();
   res.send("Days left reduced");
 });
 
