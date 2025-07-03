@@ -9,6 +9,22 @@ const { compareImageDescriptions } = require("./calculateSimilarity");
 const { fetchNotificationsFromFirebase } = require("./FetchingData/fetchData");
 const { fetchItemsFromFirebase } = require("./FetchingData/fetchData");
 const { db } = require("./firebase-service");
+const {
+  CLOUDINARY_CLOUD_NAME,
+  CLOUDINARY_UPLOAD_PRESET,
+  CLOUDINARY_API_KEY,
+  CLOUDINARY_API_SECRET,
+} = require("../Configuration/configuration");
+
+const cloudinary = require("cloudinary").v2;
+
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: CLOUDINARY_CLOUD_NAME,
+  api_key: CLOUDINARY_API_KEY,
+  api_secret: CLOUDINARY_API_SECRET,
+});
+
 const app = express();
 const PORT = 3000;
 
@@ -24,16 +40,38 @@ const fetchedNotificationsDB = path.join(
   "FetchingData/fetched-notification.json"
 );
 
+const deleteImageFromCloudinary = async (imageUrl) => {
+  try {
+    // Extract public ID from the URL
+    const publicId = imageUrl.split("/").pop().split(".")[0];
+
+    // Delete the image
+    const result = await cloudinary.uploader.destroy(publicId);
+
+    if (result.result === "ok") {
+      console.log(`Successfully deleted image: ${publicId}`);
+      return true;
+    } else {
+      console.log(`Failed to delete image: ${publicId}`);
+      return false;
+    }
+  } catch (error) {
+    console.error("Error deleting image from Cloudinary:", error);
+    return false;
+  }
+};
+
 const handleItemsExpiry = async () => {
   try {
     const snapshot = await db.collection("items").get();
-
+    a;
     // Loop over each document in the snapshot
     snapshot.forEach(async (doc) => {
       const data = doc.data();
       let daysLeft = data.daysLeft;
 
       if (daysLeft <= 0) {
+        await deleteImageFromCloudinary(data.imageUrl);
         // Delete from DB
         await db.collection("items").doc(doc.id).delete();
         console.log(`Deleted item ${doc.id}`);
@@ -63,6 +101,7 @@ const handleNotificationExpiry = async () => {
 
       if (daysLeft <= 0) {
         // Delete from DB
+        await deleteImageFromCloudinary(data.imageUrl);
         await db.collection("notifications").doc(doc.id).delete();
         console.log(`Deleted item ${doc.id}`);
       } else {
