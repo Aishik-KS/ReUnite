@@ -33,11 +33,6 @@ const fetchItemsFromFirebase = async () => {
     // Save to fetched-items.json
     const filePath = path.join(__dirname, "./fetched-items.json");
     fs.writeFileSync(filePath, JSON.stringify(items, null, 2));
-    console.log(
-      `[${new Date().toLocaleString()}] Saved ${
-        items.length
-      } items to ${filePath}`
-    );
   } catch (error) {
     console.error("Error fetching from Items:", error.stack || error);
   }
@@ -125,6 +120,7 @@ app.get("/handle-exp", async (req, res) => {
 // Image Searching Transfer
 app.post("/process-string", (req, res) => {
   fetchItemsFromFirebase();
+  console.log("Fetch From FB -PS");
   const targetImageDescription = req.body;
   console.log(targetImageDescription);
   // const targetImageDescription = "Red Wallet";
@@ -137,22 +133,16 @@ app.post("/process-string", (req, res) => {
       targetImageDescription,
       item.description
     );
+    // Add similarityScore to the item object
+    item.similarity = similarityScore;
 
-    return {
-      itemId: item.id,
-      similarity: similarityScore,
-      title: item.title,
-      description: item.description,
-      foundLocation: item.foundLocation,
-      foundDate: item.foundDate,
-      imageUrl: item.imageUrl,
-    };
+    return item;
   });
 
   // Sort results by similarity score in descending order
   results.sort((a, b) => b.similarity - a.similarity);
 
-  console.log(results);
+  // console.log(results);
   res.json({ results });
 });
 

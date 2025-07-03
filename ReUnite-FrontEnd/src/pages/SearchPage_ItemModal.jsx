@@ -116,7 +116,7 @@ const SearchPage_ItemModal = ({ item, onClose }) => {
                       ? "Item has already been claimed. If You claimed this item, check your email."
                       : claimedStatus === "UNCLAIMED"
                       ? "Claim This Item to View"
-                      : "Claim To View Drop Off Location"}
+                      : claimedStatus}
                   </span>
                 </div>
               </div>

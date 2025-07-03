@@ -1,5 +1,16 @@
 [
   {
+    "id": "H8M1ls8mIReckZj9JHYj",
+    "title": "Test1",
+    "description": "I have lost a red, oval-shaped figure with two heart eyes and a smiling mouth, with question marks inside and surrounding it. The figure is also surrounded by yellow stars.",
+    "foundLocation": "NTU",
+    "dropLocation": "NTU",
+    "foundDate": "2025-07-03",
+    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1751507062/f1lnj29quppbrsvpyy7y.jpg",
+    "status": "UNCLAIMED",
+    "claimedBy": "NONE"
+  },
+  {
     "id": "LxoiPDA3nP4x3wnFbOf9",
     "title": "Ezlink card",
     "description": "I have found a white plastic EZ-link card with \"ezlink\" written in the top right corner and \"SG 50\" on a red circle in the center. The card features various colorful images around the circle, including buildings, people, and airplanes.",
@@ -7,8 +18,8 @@
     "dropLocation": "ONE STOP@SAC",
     "foundDate": "2025-06-09",
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750866055/okkambki6nquqflc2fao.jpg",
-    "claimedBy": "NONE",
-    "status": "UNCLAIMED"
+    "status": "UNCLAIMED",
+    "claimedBy": "NONE"
   },
   {
     "id": "STLmQC1pHIzmnAArvzvD",
@@ -18,8 +29,19 @@
     "dropLocation": "ONE STOP@SAC",
     "foundDate": "2025-06-12",
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750866202/auo4xd5c1a3cm7n4dtsn.jpg",
-    "claimedBy": "NONE",
-    "status": "UNCLAIMED"
+    "status": "UNCLAIMED",
+    "claimedBy": "NONE"
+  },
+  {
+    "id": "YCbmogbf68goRzHM1SQ0",
+    "title": "Diagram",
+    "description": "I have lost a diagram that shows the item submission flow for ReUnite. The diagram is broken down into Client, AI Processing, Server, and Database steps.",
+    "foundLocation": "NTU",
+    "dropLocation": "NTU",
+    "foundDate": "2025-07-03",
+    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1751507021/ljhaztuyymb8smgw1ilq.jpg",
+    "claimedBy": "hauntedfrost12@gmail.com",
+    "status": "CLAIMED"
   },
   {
     "id": "YHHvtu9I0TvHUtf5QFKP",
@@ -29,8 +51,8 @@
     "dropLocation": "ONE STOP@SAC",
     "foundDate": "2025-06-01",
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750866014/oevulpb4a4ejrnwv98rk.jpg",
-    "claimedBy": "NONE",
-    "status": "UNCLAIMED"
+    "status": "UNCLAIMED",
+    "claimedBy": "NONE"
   },
   {
     "id": "aABLvDDzBLJSjeGOBrJZ",
@@ -40,19 +62,8 @@
     "dropLocation": "ONE STOP@SAC",
     "foundDate": "2025-06-24",
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750807972/npiesf12rakdzqbfwyyi.jpg",
-    "claimedBy": "hauntedfrost12@gmail.com",
-    "status": "CLAIMED"
-  },
-  {
-    "id": "bb0eevfuvkyONIAbIPQm",
-    "title": "Green Card holder",
-    "description": "I have found a green leather wallet with a few cards, a small amount of cash, and a key ring with several keys. The wallet has the phrase \"Every Other Thursday\" imprinted on the front.",
-    "foundLocation": "NTU TR+9",
-    "dropLocation": "ONE STOP@SAC",
-    "foundDate": "2025-05-21",
-    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750865974/trkz7a4snewpm5ckxhfk.jpg",
-    "claimedBy": "tgshivaani@gmail.com",
-    "status": "CLAIMED"
+    "status": "UNCLAIMED",
+    "claimedBy": "NONE"
   },
   {
     "id": "ewk2rbO3R6bjaphvm7MG",
@@ -73,8 +84,8 @@
     "dropLocation": "ONE STOP@SAC",
     "foundDate": "2025-05-19",
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750866113/avvwu2k70g0myf7qopj8.jpg",
-    "claimedBy": "tgshivaani@gmail.com",
-    "status": "CLAIMED"
+    "status": "UNCLAIMED",
+    "claimedBy": "NONE"
   },
   {
     "id": "i6UTkFe0wJRcTt8gwSeG",
@@ -88,6 +99,17 @@
     "status": "UNCLAIMED"
   },
   {
+    "id": "kxWR4aDYdnVgTGE34dOT",
+    "title": "Keys",
+    "description": "I have found a keychain with three silver-colored keys attached, along with a small, silver-colored guitar charm. The keychain also features a heart-shaped clip.",
+    "foundLocation": "109 NANYANG AVE, SINGAPORE 639798",
+    "dropLocation": "109 NANYANG AVE, SINGAPORE 639798",
+    "foundDate": "2025-06-27",
+    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750998332/jud9b4mbxrol7fa1uqpc.jpg",
+    "status": "UNCLAIMED",
+    "claimedBy": "NONE"
+  },
+  {
     "id": "nJeoaQCe5JMBtfBax7dd",
     "title": "Pencil case",
     "description": "I have found a white fabric pencil case with the word \"SPECIAL\" on a small pocket and a Lego ninja charm. The charm is attached to the zipper.",
@@ -97,6 +119,17 @@
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750866150/xs873ysqvcgr0hhdsuch.jpg",
     "claimedBy": "NONE",
     "status": "UNCLAIMED"
+  },
+  {
+    "id": "oe5JcDDJapPgpb0MBw73",
+    "title": "Green Wallet",
+    "description": "I have found a green leather card holder with \"Every Other Thursday\" printed on it, held in a hand. It contains a green and white credit card, a wad of cash, and a key ring with keys.",
+    "foundLocation": "76 NANYANG DR, SINGAPORE 637331",
+    "dropLocation": "76 NANYANG DR, SINGAPORE 637331",
+    "foundDate": "2025-06-27",
+    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750995059/pfptkmw54opuuotbgn1v.jpg",
+    "status": "UNCLAIMED",
+    "claimedBy": "NONE"
   },
   {
     "id": "p8CYxXmjUr5V6Ecjxd8y",
@@ -117,7 +150,18 @@
     "dropLocation": "ONE STOP@SAC",
     "foundDate": "2025-05-15",
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750865745/v0ijq3p5yryeurjnex8v.jpg",
-    "claimedBy": "tgshivaani@gmail.com",
-    "status": "CLAIMED"
+    "status": "UNCLAIMED",
+    "claimedBy": "NONE"
+  },
+  {
+    "id": "wYHFfXnvojBn1gqRObvs",
+    "title": "keys",
+    "description": "I have found a silver keychain with a heart-shaped clasp that holds several silver keys and a guitar-shaped charm. The guitar charm is white and black with silver accents.",
+    "foundLocation": "109 NANYANG AVE, SINGAPORE 639798",
+    "dropLocation": "109 NANYANG AVE, SINGAPORE 639798",
+    "foundDate": "2025-06-27",
+    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750998889/bfyal4mjjtvmr83gqufx.jpg",
+    "status": "UNCLAIMED",
+    "claimedBy": "NONE"
   }
 ]

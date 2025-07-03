@@ -54,7 +54,7 @@ const SearchImagePage = () => {
         </div>
       );
     }
-
+    // console.log(searchResults);
     return (
       <div className={`results-container ${viewMode}`}>
         {searchResults.map((item) =>
