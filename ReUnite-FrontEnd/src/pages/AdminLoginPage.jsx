@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { auth } from "../helpers/firebase";
+import Background_Image from "../assets/AdminBackground-Image.png";
 import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
@@ -75,10 +76,7 @@ const AdminLoginPage = () => {
     <div className="login-page">
       <div className="login-container">
         <div className="login-visual">
-          <img
-            src="https://img.freepik.com/premium-vector/abstract-geometric-polygon-purple-background-illustration-perfect-wallpaper-backdrop-postcard_565280-546.jpg"
-            alt="Decorative background"
-          />
+          <img src={Background_Image} alt="" />
         </div>
 
         <div className="login-ui">
@@ -146,14 +144,6 @@ const AdminLoginPage = () => {
             >
               <FcGoogle className="social-icon" size={22} />
               <span>Google</span>
-            </button>
-            <button
-              type="button"
-              className="social-button apple"
-              disabled={loading}
-            >
-              <FaApple className="social-icon" size={22} />
-              <span>Apple</span>
             </button>
           </div>
         </div>
