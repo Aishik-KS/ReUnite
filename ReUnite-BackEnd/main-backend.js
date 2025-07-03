@@ -118,6 +118,19 @@ const handleNotificationExpiry = async () => {
   }
 };
 
+app.get("/delete-items", async (req, res) => {
+  try {
+    const snapshot = await db.collection("items").get();
+
+    // Loop over each document in the snapshot
+    snapshot.forEach(async (doc) => {
+      await db.collection("items").doc(doc.id).delete();
+    });
+  } catch (error) {
+    console.error("Error handling expiration: ", error);
+  }
+});
+
 app.get("/handle-exp", async (req, res) => {
   await handleNotificationExpiry();
   await handleItemsExpiry();
@@ -132,7 +145,7 @@ app.post("/process-string", async (req, res) => {
     const itemsDB = JSON.parse(rawItemsData);
 
     const targetImageDescription = req.body;
-
+    console.log(targetImageDescription);
     const scoredItemsList = itemsDB.map((item) => {
       const similarityScore = compareImageDescriptions(
         item.description,
@@ -146,6 +159,7 @@ app.post("/process-string", async (req, res) => {
     });
 
     scoredItemsList.sort((a, b) => b.similarity - a.similarity);
+    console.log(scoredItemsList);
     res.json(scoredItemsList); // Send response to client
   } catch (error) {
     console.error("Error processing request:", error);

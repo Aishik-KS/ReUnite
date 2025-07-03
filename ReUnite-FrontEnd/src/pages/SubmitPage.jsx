@@ -273,7 +273,7 @@ const SubmitPage = () => {
             parts: [
               { inlineData: { mimeType: "image/png", data: imageBase64 } },
               {
-                text: "Generate a description of the main object in the image uploaded in only 1-2 sentences. Do not describe the background or how the object is positioned. Start with the phrase 'I have found a'",
+                text: "Generate a very detailed description of the main object in the image uploaded in only 1-2 sentences. Do not describe the background or how the object is positioned.",
               },
             ],
           },
@@ -384,6 +384,7 @@ const SubmitPage = () => {
         foundDate: formData.foundDate,
         imageUrl,
         status: "UNCLAIMED",
+        daysLeft: 30,
         claimedBy: "NONE",
       };
 
