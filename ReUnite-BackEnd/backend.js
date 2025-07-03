@@ -2,9 +2,10 @@ const express = require("express");
 const admin = require("firebase-admin");
 const cron = require("node-cron");
 const fs = require("fs");
-const path = require("path");
 const cors = require("cors");
 const { compareImageDescriptions } = require("./calculateSimilarity");
+const { fetchNotificationsFromFirebase } = require("./FetchingData/fetchData");
+const { fetchItemsFromFirebase } = require("./FetchingData/fetchData");
 
 const app = express();
 const PORT = 3000;
@@ -21,43 +22,6 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
-// Fetch from 'items' collection
-const fetchItemsFromFirebase = async () => {
-  try {
-    const snapshot = await db.collection("items").get();
-    const items = snapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }));
-
-    // Save to fetched-items.json
-    const filePath = path.join(__dirname, "./fetched-items.json");
-    fs.writeFileSync(filePath, JSON.stringify(items, null, 2));
-  } catch (error) {
-    console.error("Error fetching from Items:", error.stack || error);
-  }
-};
-
-// Fetch from 'notifications' collection
-const fetchNotificationItems = async () => {
-  try {
-    const snapshot = await db.collection("notifications").get();
-    const notifications = snapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }));
-    // Save to fetched-notification.json
-    const filePath = path.join(__dirname, "./fetched-notification.json");
-    fs.writeFileSync(filePath, JSON.stringify(notifications, null, 2));
-    console.log(
-      `[${new Date().toLocaleString()}] Saved ${
-        notifications.length
-      } notifications to ${filePath}`
-    );
-  } catch (error) {
-    console.error("Error fetching from notifications:", error.stack || error);
-  }
-};
 // Handle expiring notifications
 const handleExpiration = async () => {
   try {
@@ -90,7 +54,7 @@ const handleExpiration = async () => {
 const fetchAllData = async () => {
   console.log("Running full Firebase data fetch...");
   await fetchItemsFromFirebase();
-  await fetchNotificationItems();
+  await fetchNotificationsFromFirebase();
 };
 
 // Scheduled job: every day at midnight

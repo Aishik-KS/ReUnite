@@ -123,12 +123,12 @@ const SearchPage_ImageUploadModal = ({ onClose }) => {
         throw new Error("Failed to process image");
       }
 
-      const data = await res.json();
+      const sortedItems = await res.json(); // The backend now returns the sorted array directly
 
       navigate("/SearchImagePage", {
         state: {
           image: preview,
-          results: data.results,
+          results: sortedItems, // Use the sorted items directly
         },
       });
 

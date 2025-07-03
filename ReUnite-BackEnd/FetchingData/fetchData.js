@@ -1,13 +1,17 @@
+//fetchData.js
 const fs = require("fs");
-const admin = require("firebase-admin");
-const path = require("path");
-const serviceAccount = require("../Configuration/serviceAccountKey.json");
+const path = require("path"); // Add this
+const { db } = require("../firebase-service");
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
-
-const db = admin.firestore();
+// Use absolute paths or ensure relative paths are correct
+const fetchedItemsDB = path.join(
+  __dirname,
+  "../FetchingData/fetched-items.json"
+);
+const fetchedNotificationsDB = path.join(
+  __dirname,
+  "../FetchingData/fetched-notification.json"
+);
 
 // Fetch from 'items' collection
 const fetchItemsFromFirebase = async () => {
@@ -18,9 +22,7 @@ const fetchItemsFromFirebase = async () => {
       ...doc.data(),
     }));
 
-    // Save to fetched-items.json asynchronously
-    const filePath = path.join(__dirname, "./fetched-items.json");
-    await fs.promises.writeFile(filePath, JSON.stringify(items, null, 2));
+    await fs.promises.writeFile(fetchedItemsDB, JSON.stringify(items, null, 2));
     console.log("Items data saved.");
   } catch (error) {
     console.error("Error fetching from Items:", error.stack || error);
@@ -28,7 +30,7 @@ const fetchItemsFromFirebase = async () => {
 };
 
 // Fetch from 'notifications' collection
-const fetchNotificationItems = async () => {
+const fetchNotificationsFromFirebase = async () => {
   try {
     const snapshot = await db.collection("notifications").get();
     const notifications = snapshot.docs.map((doc) => ({
@@ -37,9 +39,9 @@ const fetchNotificationItems = async () => {
     }));
 
     // Save to fetched-notification.json asynchronously
-    const filePath = path.join(__dirname, "./fetched-notification.json");
+    // const filePath = path.join(__dirname, "./fetched-notification.json");
     await fs.promises.writeFile(
-      filePath,
+      fetchedNotificationsDB,
       JSON.stringify(notifications, null, 2)
     );
     console.log(
@@ -53,4 +55,4 @@ const fetchNotificationItems = async () => {
 };
 
 // Export functions using CommonJS
-module.exports = { fetchItemsFromFirebase, fetchNotificationItems };
+module.exports = { fetchItemsFromFirebase, fetchNotificationsFromFirebase };

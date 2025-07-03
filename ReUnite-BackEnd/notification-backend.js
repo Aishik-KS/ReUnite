@@ -1,23 +1,24 @@
+//notification-backend.js
 const fs = require("fs");
 const { compareImageDescriptions } = require("./calculateSimilarity.js");
 const {
-  fetchNotificationItems,
+  fetchNotificationsFromFirebase,
   fetchItemsFromFirebase,
-} = require("./fetchData.js");
-const { sendEmail } = require("./src/sendEmail.js");
+} = require("./FetchingData/fetchData.js");
+const { sendEmail } = require("./sendEmail.js");
+
+const fetchedItemsDB = "./FetchingData/fetched-items.json";
+const fetchedNotificationsDB = "./FetchingData/fetched-notification.json";
 
 // Fetch Items DB and Notifications DB asynchronously
-async function fetchAndProcessData() {
+async function compareAndNotify() {
   await fetchItemsFromFirebase();
-  const rawItemsData = await fs.promises.readFile(
-    "./fetched-items.json",
-    "utf-8"
-  );
+  const rawItemsData = await fs.promises.readFile(fetchedItemsDB, "utf-8");
   const itemsDB = JSON.parse(rawItemsData);
 
-  await fetchNotificationItems();
+  await fetchNotificationsFromFirebase();
   const rawNotificationsData = await fs.promises.readFile(
-    "./fetched-notification.json",
+    fetchedNotificationsDB,
     "utf-8"
   );
   const notificationsDB = JSON.parse(rawNotificationsData);
@@ -81,4 +82,4 @@ async function fetchAndProcessData() {
 }
 
 // Fetch and process data
-fetchAndProcessData();
+compareAndNotify();
