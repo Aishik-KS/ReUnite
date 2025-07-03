@@ -76,7 +76,7 @@ const AdminLoginPage = () => {
     <div className="login-page">
       <div className="login-container">
         <div className="login-visual">
-          <img src={Background_Image} alt="" />
+          {/* <img src={Background_Image} alt="" /> */}
         </div>
 
         <div className="login-ui">

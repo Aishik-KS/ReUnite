@@ -12,12 +12,15 @@
 }
 
 .login-container {
+  background-image: url("../assets/AdminBackground-Image.png");
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-size: cover; /* Ensure the image covers the entire div */
+  background-position: center; /* Optionally, center the image */
   display: flex;
   width: 100%;
   max-width: 1200px;
   height: auto;
   min-height: 600px;
-  background-color: #133b80;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -25,7 +28,7 @@
 
 .login-visual {
   flex: 1;
-  background: linear-gradient(135deg, #1e4a8b, #0d2b56);
+  /* background: linear-gradient(135deg, #1e4a8b, #0d2b56); */
 }
 
 .login-visual img {
