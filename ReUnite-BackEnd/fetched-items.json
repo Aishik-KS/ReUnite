@@ -1,16 +1,5 @@
 [
   {
-    "id": "H8M1ls8mIReckZj9JHYj",
-    "title": "Test1",
-    "description": "I have lost a red, oval-shaped figure with two heart eyes and a smiling mouth, with question marks inside and surrounding it. The figure is also surrounded by yellow stars.",
-    "foundLocation": "NTU",
-    "dropLocation": "NTU",
-    "foundDate": "2025-07-03",
-    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1751507062/f1lnj29quppbrsvpyy7y.jpg",
-    "status": "UNCLAIMED",
-    "claimedBy": "NONE"
-  },
-  {
     "id": "LxoiPDA3nP4x3wnFbOf9",
     "title": "Ezlink card",
     "description": "I have found a white plastic EZ-link card with \"ezlink\" written in the top right corner and \"SG 50\" on a red circle in the center. The card features various colorful images around the circle, including buildings, people, and airplanes.",
@@ -33,17 +22,6 @@
     "claimedBy": "NONE"
   },
   {
-    "id": "YCbmogbf68goRzHM1SQ0",
-    "title": "Diagram",
-    "description": "I have lost a diagram that shows the item submission flow for ReUnite. The diagram is broken down into Client, AI Processing, Server, and Database steps.",
-    "foundLocation": "NTU",
-    "dropLocation": "NTU",
-    "foundDate": "2025-07-03",
-    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1751507021/ljhaztuyymb8smgw1ilq.jpg",
-    "claimedBy": "hauntedfrost12@gmail.com",
-    "status": "CLAIMED"
-  },
-  {
     "id": "YHHvtu9I0TvHUtf5QFKP",
     "title": "lanyard",
     "description": "I havefound a colorful lanyard with a \"Seventeenth Heaven\" badge holder attached to it. The lanyard and badge holder have a light purple and blue color scheme with various designs, including stars, a daisy, and the words \"Seventeenth Heaven\".",
@@ -64,6 +42,17 @@
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750807972/npiesf12rakdzqbfwyyi.jpg",
     "status": "UNCLAIMED",
     "claimedBy": "NONE"
+  },
+  {
+    "id": "ePfNrTLYGrtJpfvxAUxh",
+    "title": "Casio Watch",
+    "foundLocation": "NTU CCDS",
+    "dropLocation": "ONE STOP@SAC",
+    "foundDate": "2025-07-03",
+    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1751520556/uf7mpu3myfii7ljbxykd.jpg",
+    "claimedBy": "hauntedfrost12@gmail.com",
+    "status": "CLAIMED",
+    "description": "White Casio F-91W digital watch with a matching white strap. The watch face displays a bright red digital time against a white background."
   },
   {
     "id": "ewk2rbO3R6bjaphvm7MG",
@@ -128,8 +117,8 @@
     "dropLocation": "76 NANYANG DR, SINGAPORE 637331",
     "foundDate": "2025-06-27",
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750995059/pfptkmw54opuuotbgn1v.jpg",
-    "status": "UNCLAIMED",
-    "claimedBy": "NONE"
+    "claimedBy": "hauntedfrost12@gmail.com",
+    "status": "CLAIMED"
   },
   {
     "id": "p8CYxXmjUr5V6Ecjxd8y",
@@ -150,18 +139,7 @@
     "dropLocation": "ONE STOP@SAC",
     "foundDate": "2025-05-15",
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750865745/v0ijq3p5yryeurjnex8v.jpg",
-    "status": "UNCLAIMED",
-    "claimedBy": "NONE"
-  },
-  {
-    "id": "wYHFfXnvojBn1gqRObvs",
-    "title": "keys",
-    "description": "I have found a silver keychain with a heart-shaped clasp that holds several silver keys and a guitar-shaped charm. The guitar charm is white and black with silver accents.",
-    "foundLocation": "109 NANYANG AVE, SINGAPORE 639798",
-    "dropLocation": "109 NANYANG AVE, SINGAPORE 639798",
-    "foundDate": "2025-06-27",
-    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1750998889/bfyal4mjjtvmr83gqufx.jpg",
-    "status": "UNCLAIMED",
-    "claimedBy": "NONE"
+    "claimedBy": "hauntedfrost12@gmail.com",
+    "status": "CLAIMED"
   }
 ]

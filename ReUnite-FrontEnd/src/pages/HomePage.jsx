@@ -17,8 +17,15 @@ const HomePage = () => {
         <div className="HomePage-Center">
           <h1 className="HomePage-Title">ReUnite</h1>
           <div className="HomePage-SubTitle">
-            Some Things Are <strong>SIMPLY IRREPLACEABLE</strong>. <br />
-            Recover <strong>What's Yours</strong>.
+            Some Things Are{" "}
+            <strong>
+              <i>Simply Irreplaceable</i>
+            </strong>
+            . <br />
+            Recover{" "}
+            <strong>
+              <i>What's Yours.</i>{" "}
+            </strong>
           </div>
 
           <div className="HomePage-Buttons">

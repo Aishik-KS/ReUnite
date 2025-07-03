@@ -1,3 +1,6 @@
+/* Import the font (if not already done) */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -10,8 +13,8 @@
   z-index: 1000;
   background-color: #5c2e91;
   backdrop-filter: blur(50px);
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
   height: 10vh;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .navbar-logo-container {
@@ -36,6 +39,7 @@
   font-weight: 700;
   color: #fff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .navbar-links {
@@ -51,6 +55,7 @@
   position: relative;
   padding: 0.5rem 0;
   transition: color 0.3s ease;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 /* Add underline animation base style */
@@ -106,9 +111,6 @@
 
   .navbar-logo-text {
     font-size: 1.8rem;
-  }
-  .HomePage-Right {
-    display: none;
   }
 
   .navbar-links {

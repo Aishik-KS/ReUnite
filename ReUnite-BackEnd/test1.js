@@ -32,7 +32,6 @@ const notifresults = notification.map((notification) => ({
 
 notifresults.forEach((notification) => {
   const results = [];
-
   itemresult.forEach((item) => {
     const similarityScore = compareImageDescriptions(
       item.description,
@@ -51,26 +50,32 @@ notifresults.forEach((notification) => {
     });
   });
 
-  // Filter for matches with similarity >= 60
   const highSimilarityMatches = results.filter(
     (entry) => entry.similarity >= 60
   );
 
-  // Sort by similarity score in descending order and take the top 3 matches
-  const top3Matches = highSimilarityMatches
-    .sort((a, b) => b.similarity - a.similarity)
-    .slice(0, 3);
+  const highestSimilarityMatch =
+    highSimilarityMatches.length > 0
+      ? highSimilarityMatches.reduce(
+          (max, entry) => (entry.similarity > max.similarity ? entry : max),
+          highSimilarityMatches[0]
+        )
+      : null;
 
-  // Send emails for the top 3 matches
-  top3Matches.forEach((match) => {
-    console.log(match); // For debugging
+  //send email
+  console.log(highestSimilarityMatch);
 
-    sendEmail(match.notificationEmail, match.description, {
-      title: match.title,
-      description: match.description,
-      foundLocation: match.foundLocation,
-      foundDate: match.foundDate,
-      imageUrl: match.imageUrl,
-    });
-  });
+  if (highestSimilarityMatch) {
+    sendEmail(
+      highestSimilarityMatch.notificationEmail,
+      highestSimilarityMatch.description,
+      {
+        title: highestSimilarityMatch.title,
+        description: highestSimilarityMatch.description,
+        foundLocation: highestSimilarityMatch.foundLocation,
+        foundDate: highestSimilarityMatch.foundDate,
+        imageUrl: highestSimilarityMatch.imageUrl,
+      }
+    );
+  }
 });

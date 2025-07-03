@@ -48,7 +48,7 @@
 }
 
 .HomePage-Center {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,15 +89,18 @@
   font-weight: 500;
   display: flex;
   gap: 1.5rem;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
 }
 
 .HomePage-Button {
-  padding: 0.6rem 1.4rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
   border: none;
-  border-radius: 1vw;
-  font-size: 1.2vw;
+  border-radius: 3rem;
+  font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -115,7 +118,7 @@
 }
 
 .HomePage-Button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-10px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 

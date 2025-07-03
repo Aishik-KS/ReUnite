@@ -273,7 +273,7 @@ const SubmitPage = () => {
             parts: [
               { inlineData: { mimeType: "image/png", data: imageBase64 } },
               {
-                text: "Generate a description of the main object in the image uploaded in only 1-2 sentences. Do not describe the background or how the object is positioned. Start with the phrase 'I have lost a'",
+                text: "Generate a description of the main object in the image uploaded in only 1-2 sentences. Do not describe the background or how the object is positioned. Start with the phrase 'I have found a'",
               },
             ],
           },

@@ -1,5 +1,8 @@
 const nodemailer = require("nodemailer");
-const { NODEMAILER_EMAIL_USER, NODEMAILER_EMAIL_PASSWORD } = require("../Configuration/configuration");
+const {
+  NODEMAILER_EMAIL_USER,
+  NODEMAILER_EMAIL_PASSWORD,
+} = require("../Configuration/configuration");
 
 function createSendFoundItemEmailFunction() {
   const transporter = nodemailer.createTransport({
