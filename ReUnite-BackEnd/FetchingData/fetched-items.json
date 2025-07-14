@@ -43,9 +43,9 @@
     "dropLocation": "ONE STOP@SAC",
     "foundDate": "2025-07-03",
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1751554452/iotl7wndy4nldrvkwucq.jpg",
-    "status": "UNCLAIMED",
     "daysLeft": 30,
-    "claimedBy": "NONE"
+    "claimedBy": "hauntedfrost12@gmail.com",
+    "status": "CLAIMED"
   },
   {
     "id": "6TGL4xzOFnhiwfw2oLbQ",
@@ -55,9 +55,9 @@
     "dropLocation": "ONE STOP@SAC",
     "foundDate": "2025-07-03",
     "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1751551855/lost_and_found/water_bottle.jpg",
-    "status": "UNCLAIMED",
     "daysLeft": 30,
-    "claimedBy": "NONE"
+    "claimedBy": "hauntedfrost12@gmail.com",
+    "status": "CLAIMED"
   },
   {
     "id": "BRjldGgynSUsmsoONQIg",
@@ -190,6 +190,18 @@
     "status": "UNCLAIMED",
     "daysLeft": 30,
     "claimedBy": "NONE"
+  },
+  {
+    "id": "x37sOaXDUNFxmySaK4Fe",
+    "title": "Black Watch",
+    "description": "The image showcases a black Casio G-Shock watch displaying the time as 2:06, the date as September 21st, and the day of the week as Tuesday the 14th on its digital screen. It also shows icons for Bluetooth connection, DST, and other settings.",
+    "foundLocation": "NTU CCDS",
+    "dropLocation": "ONE STOP@SAC",
+    "foundDate": "2025-07-03",
+    "imageUrl": "https://res.cloudinary.com/dhxgv7d1m/image/upload/v1751555099/iorkijzezcujppbalkmz.jpg",
+    "daysLeft": 30,
+    "claimedBy": "hauntedfrost12@gmail.com",
+    "status": "CLAIMED"
   },
   {
     "id": "xoXmEIKOOqmKXCK92pjk",
